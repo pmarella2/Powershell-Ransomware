@@ -1,8 +1,4 @@
-#Author: OfflineProgrammer
-#Modified by: Praneeth Marella
-#Date: April 23 2017
-
-#Install 7zip so it can be used to zip files
+#Install 7zip to zip files
 
 $workdir = "c:\installer\"
 
@@ -35,7 +31,7 @@ msiexec.exe /i "$workdir\7-Zip.msi" /qb
 
 #Wait 20 Seconds for the installation to finish
 
-Start-Sleep -s 20
+Start-Sleep -s 5
 
 #Remove the installer
 
