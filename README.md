@@ -18,3 +18,5 @@ Attached are the company expense reports for this month. The file is password pr
 Sincerely, Script Kiddie
 
 #Note: This is intended for education purpose/use only
+
+Quick demonstration video: https://www.youtube.com/watch?v=pQ9EtworUBY
