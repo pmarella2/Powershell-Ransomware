@@ -17,6 +17,6 @@ Attached are the company expense report for this month. The file is encrypted so
 
 Sincerely, Script Kiddie
 
-#Note: This is intended for education purpose/use only
+#Note: This is intended for educational purpose/use only
 
 Quick demonstration video: https://www.youtube.com/watch?v=pQ9EtworUBY
