@@ -13,8 +13,8 @@ Now all you need is a target and instruct them in the email to download the .bat
 
 Good Afternoon Rick,
 
-Attached are the company expense reports for this month. 
-The files contain sensitive information so the files are encrypted.
+Attached is the company expense report for this month. 
+The file contains sensitive information so the file is encrypted.
 In order to read the expense report please download both the attachments. 
 Then open and run the Expense-Report.bat file (first attachment) to unlock the Expense-Report.
 
