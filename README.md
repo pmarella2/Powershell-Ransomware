@@ -6,7 +6,7 @@
 #### Updated: September 10 2017
 
 #### **Description:**
-This is a simple powershell script that can copy specified files from a computer into a folder then zip them with a random 8 character password. The files that are copied are deleted from the source. Then the script emails the password and zip folder to a specified email (I suggest using Guerrilla Email.) Now to clean up the evidence the script deletes the folder files were copied to and the zip folder.
+This is a simple PowerShell script that can copy specified files (or directories) from the target host into a folder and then zip it with a random 8 character password. The copied files are then deleted from the source host. For exfil of the copied files, the script emails the password and zip folder to a specified email (I suggest using Guerrilla Email.) Now to clean up the evidence, the script deletes the folder files were copied to and the zip folder.
 
 #### **How to use:**
 * First open up the powershell script and modify it to include the necessary file paths that files need to be stolen from.
